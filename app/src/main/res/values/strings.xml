@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SimplyShop</string>
+    <string name="registration">Регистрация</string>
+    <string name="forget_password">Забыли пароль?</string>
 </resources>

@@ -3,4 +3,12 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="white">#fff</color>
+    <color name="border_input">#C8CFCE</color>
+    <color name="input_text">#595959</color>
+    <color name="green">#29C4B3</color>
+    <color name="gray">#F4F4F4</color>
+    <color name="red">#E57066</color>
+    <color name="red_google_btn">#DB4437</color>
+    <color name="blue_facebook_btn">#4267B2</color>
 </resources>
