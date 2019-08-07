@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".mainpage.MainPageActivity">
+    tools:context=".mainpage.LoginPageActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,7 +20,9 @@
         <EditText
             android:id="@+id/login_input"
             style="@style/form_input"
-            android:hint="Имя"/>
+            android:hint="Имя"
+            android:inputType="text"
+            android:importantForAutofill="no" />
     </LinearLayout>
 
     <LinearLayout
@@ -38,7 +40,9 @@
         <EditText
             android:id="@+id/password_input"
             style="@style/form_input"
-            android:hint="Пароль" />
+            android:inputType="textPassword"
+            android:hint="Пароль"
+            android:importantForAutofill="no" />
 
     </LinearLayout>
 
