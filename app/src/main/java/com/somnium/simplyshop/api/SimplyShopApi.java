@@ -10,6 +10,7 @@ import retrofit2.Response;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Query;
 
 public interface SimplyShopApi {
     @GET("/products")
@@ -17,6 +18,15 @@ public interface SimplyShopApi {
 
     @POST("auth")
     Observable<Response<ResponseModel<UserCreate>>> auth(@Body UserCreate user);
+
+
+    @POST("users/registration")
+    Observable<Response<ResponseModel<UserCreate>>> registration(@Body UserCreate user);
+
+
+    @POST("users/forgetPassword")
+    Observable<Response<ResponseModel<UserCreate>>> resetPassword(@Query("name") String name, @Query("email") String email);
+
 
 
 }

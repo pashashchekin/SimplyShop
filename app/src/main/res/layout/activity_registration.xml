@@ -1,79 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context=".mainpage.LoginPageActivity">
+    tools:context=".mainpage.RegistrationActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingTop="16dp">
+        android:paddingTop="12dp">
         <TextView
             style="@style/form_input_title"
             android:layout_marginTop="8dp"
-            android:text="Имя" />
+            android:text="Имя польвователя" />
 
         <EditText
-            android:id="@+id/login_input"
+            android:id="@+id/input_name_reg"
             style="@style/form_input"
             android:hint="Имя"
-            android:inputType="text"
-            android:importantForAutofill="no" />
+            android:inputType="text"/>
+
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingTop="16dp">
+        android:paddingTop="12dp">
 
+        <TextView
+            style="@style/form_input_title"
+            android:layout_marginTop="8dp"
+            android:text="Email" />
+
+        <EditText
+            android:id="@+id/input_email_reg"
+            style="@style/form_input"
+            android:hint="Введите ваш Email"
+            android:inputType="textEmailAddress"
+            android:importantForAutofill="no" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="12dp">
         <TextView
             style="@style/form_input_title"
             android:layout_width="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Пароль" />
 
-        <EditText
-            android:id="@+id/password_input"
-            style="@style/form_input"
-            android:inputType="textPassword"
-            android:hint="Пароль"
-            android:importantForAutofill="no" />
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            app:hintEnabled="false"
+            android:layout_marginTop="8dp">
 
-    </LinearLayout>
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/input_password_reg"
+                style="@style/form_input"
+                android:hint="Пароль"
+                android:inputType="textPassword"/>
+        </android.support.design.widget.TextInputLayout>
 
-    <Button
-        android:id="@+id/sign_in_btn"
-        style="@style/txt_btn"
-        android:text="Вход"
-        android:background="@drawable/bg_button"
-        />
-
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="24dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp">
+        <Button
+            android:id="@+id/registration_btn"
+            style="@style/txt_btn"
+            android:text="Регистрация"
+            android:background="@drawable/bg_button"
+            />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp">
 
             <TextView
-                android:id="@+id/registration_txtview"
+                android:id="@+id/signin_actvity_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/registration"
+                android:text="Уже имеется аккаунт?"
                 android:textColor="@color/green"
                 android:textSize="14sp"
                 android:textStyle="bold"/>
@@ -86,33 +102,11 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" >
-
-            <TextView
-                android:id="@+id/forget_psw_txtview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/forget_password"
-                android:textColor="@color/red"
-                android:textStyle="bold"
-                android:textSize="14sp" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@drawable/solid_red_line"/>
-        </LinearLayout>
-    </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:orientation="horizontal"
         android:layout_height="wrap_content">
 
