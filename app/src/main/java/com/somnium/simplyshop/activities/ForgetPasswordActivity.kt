@@ -1,4 +1,4 @@
-package com.somnium.simplyshop.mainpage
+package com.somnium.simplyshop.activities
 
 import android.content.Intent
 import android.os.Bundle

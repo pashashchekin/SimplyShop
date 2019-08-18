@@ -1,4 +1,4 @@
-package com.somnium.simplyshop.mainpage
+package com.somnium.simplyshop.activities
 
 import android.os.Bundle
 import android.support.v4.app.Fragment

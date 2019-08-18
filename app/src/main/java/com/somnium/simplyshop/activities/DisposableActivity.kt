@@ -1,4 +1,4 @@
-package com.somnium.simplyshop.mainpage
+package com.somnium.simplyshop.activities
 
 import android.support.v7.app.AppCompatActivity
 import io.reactivex.disposables.CompositeDisposable

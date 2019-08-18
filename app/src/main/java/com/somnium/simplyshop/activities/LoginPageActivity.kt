@@ -1,4 +1,4 @@
-package com.somnium.simplyshop.mainpage
+package com.somnium.simplyshop.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -84,7 +84,7 @@ class LoginPageActivity : AppCompatActivity(){
     }
     private fun onLoginSuccess(response: Response<ResponseModel<UserCreate>>) {
         if (response.isSuccessful && response.body()?.status == ServerStatus.SUCCESS) {
-                val intent = Intent(this, RegistrationActivity::class.java)
+                val intent = Intent(this, HomeActivity::class.java)
                 startActivity(intent)
         }
 
