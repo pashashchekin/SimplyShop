@@ -1,9 +1,11 @@
 package com.somnium.simplyshop.activities
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.TextInputEditText
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -11,6 +13,8 @@ import android.widget.Toast
 import com.somnium.simplyshop.App
 import com.somnium.simplyshop.R
 import com.somnium.simplyshop.api.ObserveOnMainThread
+import com.somnium.simplyshop.entities.Jwtoken
+import com.somnium.simplyshop.entities.LoginModel
 import com.somnium.simplyshop.entities.ResponseModel
 import com.somnium.simplyshop.entities.UserCreate
 import com.somnium.simplyshop.enums.ServerStatus
@@ -26,12 +30,15 @@ class LoginPageActivity : AppCompatActivity(){
     private  lateinit var regBtn : TextView
     private  lateinit var forgetBtn : TextView
     private val disposables = CompositeDisposable()
+    private lateinit var userToken: UserCreate
+    private lateinit var jwtoken: Jwtoken
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         initUI()
+        Jwtoken.getToken(this)
     }
 
     private fun initUI() {
@@ -74,7 +81,7 @@ class LoginPageActivity : AppCompatActivity(){
     }
 
     private fun sigIn() {
-        disposables.add(App.getSimplyShopApi().auth(UserCreate(login.text.toString(),password.text.toString(),""))
+        disposables.add(App.getSimplyShopApi().auth(LoginModel(login.text.toString().trim(),password.text.toString().trim()))
                 .compose(ObserveOnMainThread())
                 .subscribeBy(
                         onNext = ::onLoginSuccess,
@@ -84,14 +91,22 @@ class LoginPageActivity : AppCompatActivity(){
     }
     private fun onLoginSuccess(response: Response<ResponseModel<UserCreate>>) {
         if (response.isSuccessful && response.body()?.status == ServerStatus.SUCCESS) {
-                val intent = Intent(this, HomeActivity::class.java)
-                startActivity(intent)
+            userToken = response.body()?.data!!
+            Log.d("qwe1", userToken.toString())
+            val userToken = userToken.auth_token
+            val jwtoken = Jwtoken.getToken(this)
+            jwtoken.auth_token = userToken
+            Log.d("token12",jwtoken.auth_token.toString())
+            Jwtoken.saveToken(this@LoginPageActivity,jwtoken)
+
+            val intent = Intent(this, HomeActivity::class.java)
+            //intent.putExtra(KEY_ACCOUNT, userToken)
+            startActivity(intent)
         }
 
     }
 
     private fun onLoginError(throwable: Throwable) {
-
 
     }
 

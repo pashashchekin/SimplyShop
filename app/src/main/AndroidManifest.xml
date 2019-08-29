@@ -12,7 +12,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
+        android:theme="@style/AppTheme.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".activities.LoginPageActivity">
             <intent-filter>
@@ -27,7 +27,7 @@
         <activity android:name=".activities.ProfileActivity" />
         <activity android:name=".activities.CartActivity" />
         <activity android:name=".activities.LikesActivity" />
-        <activity android:name=".activities.HistoryActivity"></activity>
+        <activity android:name=".activities.HistoryActivity" />
     </application>
 
 </manifest>

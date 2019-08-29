@@ -11,12 +11,14 @@ import android.widget.Toast
 import com.somnium.simplyshop.App
 import com.somnium.simplyshop.R
 import com.somnium.simplyshop.api.ObserveOnMainThread
+import com.somnium.simplyshop.entities.LoginModel
 import com.somnium.simplyshop.entities.ResponseModel
 import com.somnium.simplyshop.entities.UserCreate
 import com.somnium.simplyshop.enums.ServerStatus
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.subscribeBy
 import retrofit2.Response
+
 
 class RegistrationActivity : AppCompatActivity() {
 
@@ -67,7 +69,7 @@ class RegistrationActivity : AppCompatActivity() {
     }
 
     private fun registrationProceed() {
-        disposables.add(App.getSimplyShopApi().registration(UserCreate(username.text.toString(),password.text.toString(),email.text.toString()))
+        disposables.add(App.getSimplyShopApi().registration(LoginModel(username.text.toString(),password.text.toString()))
                 .compose(ObserveOnMainThread())
                 .subscribeBy(
                         onNext = ::onLoginSuccess,

@@ -8,6 +8,13 @@
         <item name="colorAccent">@color/green</item>
     </style>
 
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="contentInsetStart">0dp</item>
+        <item name="contentInsetEnd">0dp</item>
+    </style>
+
     <style name="form_input">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">48dp</item>
