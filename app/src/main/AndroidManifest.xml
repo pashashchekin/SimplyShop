@@ -14,8 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".activities.LoginPageActivity">
-            <intent-filter>
+        <activity android:name=".activities.SplashScreenActivity">
+        <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -28,6 +28,8 @@
         <activity android:name=".activities.CartActivity" />
         <activity android:name=".activities.LikesActivity" />
         <activity android:name=".activities.HistoryActivity" />
-    </application>
+        <activity android:name=".activities.SoftOnBoardingActivity" />
+        <activity android:name=".activities.LoginPageActivity"/>
+        </application>
 
 </manifest>

@@ -5,4 +5,20 @@
     <string name="forget_password_title">Хм, кажется у вас проблемы со входом. Заполните форму ниже, чтобы получить доступ к вашей учетной записи.</string>
     <string name="soms_short">%s с</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lorem_ipsum_dolor">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit</string>
+    <string name="lorem">Lorem ipsum</string>
+    <string name="pass">Пропустить</string>
+    <string name="ready">Готово</string>
+    <string name="next">Далее</string>
+
+    <string name="soft_of_title1">Находите</string>
+    <string name="soft_of_title2">Оплачивайте легко</string>
+    <string name="soft_of_title3">Быстрая доставка</string>
+
+    <string name="soft_of_body1">Находите подходящий товар для вашего стиля легко с помощью swipe и scroll</string>
+    <string name="soft_of_body2">Оплачивайте приобретенные товары, ипользуя удобный способ оплаты</string>
+    <string name="soft_of_body3">В нашем специализированном партнере по доставке вы быстро получите ваши товары</string>
+
+
 </resources>

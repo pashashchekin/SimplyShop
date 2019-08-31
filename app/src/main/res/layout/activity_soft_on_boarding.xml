@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".activities.SoftOnBoardingActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/activity_soft_on_boarding_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/activity_soft_on_boarding_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:paddingBottom="30dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="30dp"
+            android:text="Пропустить"
+            android:textColor="@color/tab_color_active"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <me.relex.circleindicator.CircleIndicator
+            android:id="@+id/activity_soft_on_boarding_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            android:layout_gravity="center"
+            app:ci_drawable="@drawable/ic_filled_active"
+            app:ci_drawable_unselected="@drawable/ic_filled" />
+
+        <TextView
+            android:id="@+id/activity_soft_on_boarding_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:paddingBottom="30dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="30dp"
+            android:text="Далее"
+            android:textColor="@color/tab_color_active"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+</LinearLayout>

@@ -8,12 +8,14 @@
     <color name="border_input">#C8CFCE</color>
     <color name="input_text">#595959</color>
     <color name="text_bold">#3C3C3C</color>
+    <color name="text_color">#9D9D9D</color>
     <color name="text_product_name">#C0C0C0</color>
     <color name="green">#29C4B3</color>
     <color name="tab_color">#CDDADE</color>
     <color name="tab_color_active">#37BEA9</color>
     <color name="gray">#F4F4F4</color>
     <color name="red">#E57066</color>
+    <color name="begin_btn">#FF9966</color>
     <color name="red_google_btn">#DB4437</color>
     <color name="blue_facebook_btn">#4267B2</color>
 </resources>

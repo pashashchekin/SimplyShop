@@ -5,7 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="270dp"
-    android:layout_margin="16dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="16dp"
     android:background="@drawable/bg_form_input"
     >
 
@@ -19,16 +22,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <android.support.constraint.ConstraintLayout
-        android:layout_width="50dp"
-        android:layout_height="25dp"
+        android:id="@+id/block_likes"
+        android:layout_width="66dp"
+        android:layout_height="33dp"
         android:background="@drawable/bg_product_likes"
         app:layout_constraintBottom_toBottomOf="@+id/product_image"
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
-            android:id="@+id/icon_likes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/likes_btn"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
@@ -46,11 +50,11 @@
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             android:text="100"
-            android:textSize="12sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/icon_likes"
+            app:layout_constraintStart_toEndOf="@+id/likes_btn"
             app:layout_constraintTop_toTopOf="parent" />
 
     </android.support.constraint.ConstraintLayout>
